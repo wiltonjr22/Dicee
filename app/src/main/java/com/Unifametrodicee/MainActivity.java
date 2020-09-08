@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.dice6
         };
 
-        leftDice.setOnClickListener(new View.OnClickListener() {
+        rollbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Random numberRandom = new Random();
@@ -42,5 +42,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        leftDice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random numberRandom = new Random();
+                int number = numberRandom.nextInt(6);
+                leftDice.setImageResource(diceearray[number]);
+
+            }
+        });
+
+        rightDice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random numberRandom = new Random();
+                int number = numberRandom.nextInt(6);
+                rightDice.setImageResource(diceearray[number]);
+
+            }
+        });
     }
 }
